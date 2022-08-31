@@ -11,6 +11,7 @@ vim /etc/yum.repos.d/rhel8.repo
 ```
 
 ```conf
+
 [InstallMedia-BaseOS]
 name=Red Hat Enterprise Linux 8 - BaseOS
 metadata_expire=-1

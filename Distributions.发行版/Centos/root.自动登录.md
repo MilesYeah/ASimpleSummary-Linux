@@ -44,7 +44,9 @@ total 32
 -rw-r--r--. 1 root root  130 Aug 13  2018 xinit-compat.desktop
 [root@localhost xsessions]#
 ```
+
 ```sh
+
 # 以经典桌面登录
 for name in `ls`
 do 
@@ -57,7 +59,9 @@ do
     fi
 done
 ll
+
 ```
+
 ```sh
 [root@localhost xsessions]# ll
 total 32
@@ -77,12 +81,14 @@ total 32
 ## 文本模式
 ```sh
 # 设定字符模式登录
-[root@localhost-system ~]# systemctl set-default multi-user.target
+systemctl set-default multi-user.target
 
 # 修改如下配置
-[root@localhost ~]# cd /lib/systemd/system/
-[root@localhost system]# cp getty@.service getty@.service.ori
-[root@localhost system]# vim /lib/systemd/system/getty@.service
+cd /lib/systemd/system/
+cp getty@.service getty@.service.ori
+vim /lib/systemd/system/getty@.service
+
+```conf
 #ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear %I $TERM
 ExecStart=-/sbin/agetty --autologin root --noclear %I $TERM
 ```

@@ -10,22 +10,20 @@
 2. 下载CentOS-Base.repo 到/etc/yum.repos.d/
     ```sh
     cd /etc/yum.repos.d/
-
-    [root@localhost yum.repos.d]# wget -O /etc/yum.repos.d/centos8.repo https://mirrors.aliyun.com/repo/Centos-8.repo
-
+    wget -O /etc/yum.repos.d/centos8.repo https://mirrors.aliyun.com/repo/Centos-8.repo
     # mv centos8.repo redhat.repo
     ```
 
     ```sh
-    wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    wget -O /etc/yum.repos.d/CentOS7-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
     # 或者
-    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    curl -o /etc/yum.repos.d/CentOS7-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
     ```
 
 
     ```sh
-    [root@localhost yum.repos.d]# sed -i 's/$basearch/x86_64/g' centos8.repo
-    [root@localhost yum.repos.d]# sed -i 's/$releasever/8/g' centos8.repo
+    sed -i 's/$basearch/x86_64/g' centos8.repo
+    sed -i 's/$releasever/8/g' centos8.repo
     ```
 
 

@@ -4,21 +4,21 @@ Shell case 语句为多选择语句。
 case语句格式如下：
 ```sh
 case 值 in
-模式1)
-    command1
-    ...
-    commandN
-    ;;
-模式2)
-    command1
-    ...
-    commandN
-    ;;
-*)
-    command1
-    ...
-    commandN
-    ;;
+    模式1)
+        command1
+        ...
+        commandN
+        ;;
+    模式2)
+        command1
+        ...
+        commandN
+        ;;
+    *)
+        command1
+        ...
+        commandN
+        ;;
 esac
 ```
 
